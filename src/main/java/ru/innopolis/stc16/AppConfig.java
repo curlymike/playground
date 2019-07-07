@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.ImportResource;
+import org.springframework.context.annotation.Scope;
 import ru.innopolis.stc16.entity.Contact;
 import ru.innopolis.stc16.entity.Country;
 import ru.innopolis.stc16.entity.Person;
@@ -18,6 +19,7 @@ public class AppConfig {
   private Country country;
 
   @Bean(name = "pesron")
+  @Scope("prototype")
   public Person getPersonBean() {
     List<Contact> contacts = new ArrayList<>();
     contacts.add(new Contact("ivanov@mail.ru"));
