@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="country_ru" class="ru.innopolis.stc16.entity.Country">
+        <property name="code" value="RU"/>
+        <property name="name" value="Russian Federation"/>
+    </bean>
+
+    <bean id="c1" class="ru.innopolis.stc16.entity.Contact">
+        <constructor-arg value="ivanov@mail.ru"/>
+    </bean>
+
+    <bean id="person" class="ru.innopolis.stc16.entity.Person">
+        <property name="id" value="-1"/>
+        <property name="name" value="Ivanov Ivan"/>
+        <property name="country" ref="country_ru"/>
+        <property name="contacts">
+            <list>
+                <ref bean="c1"/>
+                <bean class="ru.innopolis.stc16.entity.Contact">
+                    <constructor-arg value="+79110000000"/>
+                </bean>
+            </list>
+        </property>
+    </bean>
+
+</beans>

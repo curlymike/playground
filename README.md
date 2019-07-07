@@ -1,2 +1,6 @@
-# Java playground
+# Spring IoC
+
+**XML configuration demo**
+
+
 
