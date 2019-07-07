@@ -1,6 +1,4 @@
 # Spring IoC
 
-**XML configuration demo**
-
-
+**Annotation configuration demo (with some XML mixed in)**
 
