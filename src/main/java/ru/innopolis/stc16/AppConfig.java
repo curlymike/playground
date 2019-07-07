@@ -18,7 +18,7 @@ public class AppConfig {
   @Autowired
   private Country country;
 
-  @Bean(name = "pesron")
+  @Bean(name = "person")
   @Scope("prototype")
   public Person getPersonBean() {
     List<Contact> contacts = new ArrayList<>();
